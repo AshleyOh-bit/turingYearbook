@@ -14,7 +14,6 @@ class Cohort extends React.Component {
     }
 
     render() {
-        console.log(this.state.cohort)
         const personComponents = this.state.cohort.staff.map(person => {
             return <Person key={person.id} name={person.name} quote={person.quote} superlative={person.superlative} photo={person.photo}/>
         })
