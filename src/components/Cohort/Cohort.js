@@ -1,7 +1,7 @@
 import React from 'react';
 import Person from '../Person/Person';
 import './Cohort.css';
-import App from './App/App';
+import App from '../App/App';
 
 // COHORT COMPONENT CODE GOES HERE
 
