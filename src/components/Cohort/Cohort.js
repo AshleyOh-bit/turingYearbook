@@ -13,6 +13,16 @@ class Cohort extends App {
         }
     }
 
+    render() {
+        const personComponents = this.state.cohort.map(person => {
+            return <Person key={person.id} name={person.name} quote={person.quote} superlative={person.superlative} photo={person.photo}/>
+        })
+        return (
+            <div>
+                {personComponents}
+            </div>
+        )
+    }
      
 }
 //acts as a container for Person
