@@ -5,16 +5,17 @@ import App from '../App/App';
 
 // COHORT COMPONENT CODE GOES HERE
 
-class Cohort extends App {
-    constructor(staff) {
-        super(staff)
+class Cohort extends React.Component {
+    constructor(props) {
+        super()
         this.state = {
-            cohort: staff
+            cohort: props.staff
         }
     }
 
     render() {
-        const personComponents = this.state.cohort.map(person => {
+        console.log(this.state.cohort)
+        const personComponents = this.state.cohort.staff.map(person => {
             return <Person key={person.id} name={person.name} quote={person.quote} superlative={person.superlative} photo={person.photo}/>
         })
         return (
