@@ -18,6 +18,8 @@ class App extends Component {
       <h1>Turing Yearbook</h1>
       </header>
         YOUR CODE GOES HERE
+        {/* {console.log(this.state)} */}
+        <Cohort staff={this.state}/>
       </div>
     );
   }
