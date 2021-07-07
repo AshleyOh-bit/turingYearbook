@@ -7,7 +7,7 @@ import App from '../App/App';
 
 class Cohort extends React.Component {
     constructor(props) {
-        super()
+        super(props)
         this.state = {
             cohort: props.staff
         }
