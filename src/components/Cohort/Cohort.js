@@ -18,7 +18,7 @@ class Cohort extends React.Component {
             return <Person key={person.id} name={person.name} quote={person.quote} superlative={person.superlative} photo={person.photo}/>
         })
         return (
-            <div>
+            <div className="staff-container">
                 {personComponents}
             </div>
         )
