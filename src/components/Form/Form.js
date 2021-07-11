@@ -5,7 +5,6 @@ class Form extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            id: 0,
             name: "",
             photo: "",
             quote: "",
@@ -20,7 +19,6 @@ class Form extends React.Component {
 
     clearInputs = () => {
         this.setState({
-            id: 0,
             name: "",
             photo: "",
             quote: "",
@@ -34,6 +32,7 @@ class Form extends React.Component {
             id: Date.now(),
             ...this.state
         }
+        console.log(newStudent)
         this.props.handleClick(newStudent)
         this.clearInputs()
     }

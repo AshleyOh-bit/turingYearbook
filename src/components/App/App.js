@@ -14,7 +14,6 @@ class App extends Component {
   }
 
   handleClick = newStudent => {
-    console.log(this.state)
     this.setState({students: [...this.state.students, newStudent]})
   }
 
