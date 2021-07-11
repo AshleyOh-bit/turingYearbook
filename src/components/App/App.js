@@ -13,6 +13,11 @@ class App extends Component {
     }
   }
 
+  handleClick = newStudent => {
+    console.log(this.state)
+    this.setState({students: [...this.state.students, newStudent]})
+  }
+
   render() {
     return (
       <div className="App">
@@ -24,7 +29,7 @@ class App extends Component {
       </section>
       <section>
       <h2>Enroll a Student</h2>
-        <Form students={this.state.students}/>
+        <Form students={this.state.students} handleClick={this.handleClick}/>
       </section>
       </div>
     );

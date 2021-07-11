@@ -2,9 +2,10 @@ import React from "react"
 import "./Form.css"
 
 class Form extends React.Component {
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
         this.state = {
+            id: 0,
             name: "",
             photo: "",
             quote: "",
@@ -12,14 +13,31 @@ class Form extends React.Component {
         }
     }
 
-    handleChange(event) {
+    handleChange = event => {
         const {name, value} = event.target
         this.setState({[name]: value})
     }
 
-    handleClick() {
-
+    clearInputs = () => {
+        this.setState({
+            id: 0,
+            name: "",
+            photo: "",
+            quote: "",
+            superlative: ""
+        })
     }
+
+    submitStudent = event => {
+        event.preventDefault()
+        const newStudent = {
+            id: Date.now(),
+            ...this.state
+        }
+        this.props.handleClick(newStudent)
+        this.clearInputs()
+    }
+
 
     render() {
         return (
@@ -28,7 +46,7 @@ class Form extends React.Component {
                 <input value={this.state.photo} name="photo" placeholder="Photo" onChange={event => this.handleChange(event)}/>
                 <input value={this.state.quote} name="quote" placeholder="Quote" onChange={event => this.handleChange(event)}/>
                 <input value={this.state.superlative} name="superlative" placeholder="Superlative" onChange={event => this.handleChange(event)}/>
-                <button onClick={event => this.handleClick(event)}>Submit</button>
+                <button onClick={event => this.submitStudent(event)}>Submit</button>
             </form>
         )
 
