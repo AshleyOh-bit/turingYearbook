@@ -6,7 +6,7 @@ import './Person.css';
 const Person = (props) => {
     return (
         <div className="card">
-            <img src={props.photo}/>
+            <img src={props.photo} alt={props.name}/>
             <h2>{props.name}</h2>
             <p>{props.quote}</p>
             <h3>{props.superlative}</h3>
