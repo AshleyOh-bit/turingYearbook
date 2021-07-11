@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Cohort from '../Cohort/Cohort';
+import Form from '../Form/Form';
 import people from '../../data/yearbook-data.js';
 import './App.css';
 
@@ -21,10 +22,10 @@ class App extends Component {
       <section>
         <Cohort staff={this.state.staff} students={this.state.students}/>
       </section>
-      {/* <section>
-      <h2>Students</h2>
-        <Cohort students={this.state.students}/>
-      </section> */}
+      <section>
+      <h2>Enroll a Student</h2>
+        <Form students={this.state.students}/>
+      </section>
       </div>
     );
   }
