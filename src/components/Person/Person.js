@@ -5,8 +5,11 @@ import './Person.css';
 
 const Person = (props) => {
     return (
-        <div>
-            
+        <div className="card">
+            <img src={props.photo}/>
+            <h2>{props.name}</h2>
+            <p>{props.quote}</p>
+            <h3>{props.superlative}</h3>
         </div>
     )
 }

@@ -19,7 +19,7 @@ class App extends Component {
       </header>
         YOUR CODE GOES HERE
         {/* {console.log(this.state)} */}
-        <Cohort staff={this.state}/>
+        <Cohort className="staffContainer" staff={this.state}/>
       </div>
     );
   }
